@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>經濟學人文章</title>
+  <style>
+    :root {
+      --bg: #f3efe7;
+      --paper: rgba(255, 252, 246, 0.88);
+      --paper-strong: #fffdf9;
+      --text: #1c1a18;
+      --muted: #6c655d;
+      --line: rgba(113, 94, 71, 0.18);
+      --accent: #cf102d;
+      --accent-dark: #9c0d23;
+      --shadow: 0 20px 50px rgba(58, 37, 24, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(207, 16, 45, 0.15), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(157, 119, 63, 0.14), transparent 24%),
+        linear-gradient(180deg, #f8f4ed 0%, var(--bg) 100%);
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 24px auto 40px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 249, 241, 0.72)),
+        #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -50px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(207, 16, 45, 0.16), rgba(207, 16, 45, 0));
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(207, 16, 45, 0.1);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: 0.01em;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 14px 30px rgba(68, 49, 27, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .meta {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      min-height: 2.9em;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(207, 16, 45, 0.14);
+      background: var(--paper-strong);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .links a:hover,
+    .links a:focus-visible {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px dashed rgba(113, 94, 71, 0.28);
+      border-radius: 20px;
+      color: var(--muted);
+      background: rgba(255, 251, 244, 0.65);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 20px, 1180px);
+        margin-top: 10px;
+      }
+
+      .hero {
+        padding: 22px 18px;
+        border-radius: 24px;
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+
+      .meta {
+        min-height: auto;
+      }
+
+      .links a {
+        flex: 1 1 calc(33.333% - 10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">The Economist Index</div>
+      <h1>經濟學人文章</h1>
+      <p class="lead">依照你指定的欄目整理成首頁導覽。版面以手機瀏覽優先設計，同時保留桌面閱讀的層次感，方便快速進入各篇文章頁面。</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Leaders</h2>
+        <p class="meta">社論／頭條評論</p>
+        <div class="links">
+          <a href="Leaders1.html">1</a>
+          <a href="Leaders2.html">2</a>
+          <a href="Leaders3.html">3</a>
+          <a href="Leaders4.html">4</a>
+          <a href="Leaders5.html">5</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>By Invitation</h2>
+        <p class="meta">特邀評論</p>
+        <div class="links">
+          <a href="Invitation.html">1</a>
+          <a href="Invitation.html">2</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Briefing</h2>
+        <p class="meta">專題深度報導</p>
+        <div class="links">
+          <a href="Briefing1.html">1</a>
+          <a href="Briefing2.html">2</a>
+          <a href="Briefing3.html">3</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Special Reports</h2>
+        <p class="meta">特別報告</p>
+        <div class="links">
+          <a href="Special1.html">1</a>
+          <a href="Special2.html">2</a>
+          <a href="Special3.html">3</a>
+          <a href="Special4.html">4</a>
+          <a href="Special5.html">5</a>
+          <a href="Special6.html">6</a>
+          <a href="Special7.html">7</a>
+          <a href="Special8.html">8</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Asia</h2>
+        <p class="meta">亞洲</p>
+        <div class="links">
+          <a href="Asia1.html">1</a>
+          <a href="Asia2.html">2</a>
+          <a href="Asia3.html">3</a>
+          <a href="Asia4.html">4</a>
+          <a href="Asia5.html">5</a>
+          <a href="Asia6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>China</h2>
+        <p class="meta">中國</p>
+        <div class="links">
+          <a href="China1.html">1</a>
+          <a href="China2.html">2</a>
+          <a href="China3.html">3</a>
+          <a href="China4.html">4</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Europe</h2>
+        <p class="meta">歐洲</p>
+        <div class="links">
+          <a href="Europe1.html">1</a>
+          <a href="Europe2.html">2</a>
+          <a href="Europe3.html">3</a>
+          <a href="Europe4.html">4</a>
+          <a href="Europe5.html">5</a>
+          <a href="Europe6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>United States</h2>
+        <p class="meta">美國</p>
+        <div class="links">
+          <a href="United1.html">1</a>
+          <a href="United2.html">2</a>
+          <a href="United3.html">3</a>
+          <a href="United4.html">4</a>
+          <a href="United5.html">5</a>
+          <a href="United6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Britain</h2>
+        <p class="meta">英國</p>
+        <div class="links">
+          <a href="Britain1.html">1</a>
+          <a href="Britain2.html">2</a>
+          <a href="Britain3.html">3</a>
+          <a href="Britain4.html">4</a>
+          <a href="Britain5.html">5</a>
+          <a href="Britain6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Business</h2>
+        <p class="meta">商業</p>
+        <div class="links">
+          <a href="Business1.html">1</a>
+          <a href="Business2.html">2</a>
+          <a href="Business3.html">3</a>
+          <a href="Business4.html">4</a>
+          <a href="Business5.html">5</a>
+          <a href="Business6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Finance &amp; Economics</h2>
+        <p class="meta">金融與經濟</p>
+        <div class="links">
+          <a href="Finance1.html">1</a>
+          <a href="Finance2.html">2</a>
+          <a href="Finance3.html">3</a>
+          <a href="Finance4.html">4</a>
+          <a href="Finance5.html">5</a>
+          <a href="Finance6.html">6</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Science &amp; Technology</h2>
+        <p class="meta">科學與科技</p>
+        <div class="links">
+          <a href="Science1.html">1</a>
+          <a href="Science2.html">2</a>
+          <a href="Science3.html">3</a>
+          <a href="Science4.html">4</a>
+          <a href="Science5.html">5</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>International</h2>
+        <p class="meta">國際</p>
+        <div class="links">
+          <a href="International1.html">1</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Culture / Books &amp; Arts</h2>
+        <p class="meta">書與文化</p>
+        <div class="links">
+          <a href="Culture1.html">1</a>
+          <a href="Culture2.html">2</a>
+          <a href="Culture3.html">3</a>
+          <a href="Culture4.html">4</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer-note">
+      目前這份首頁已依你提供的命名規則建立連結。若部分文章檔案還沒建立，點擊後會先顯示找不到頁面；之後只要把對應檔名放進同一個資料夾即可直接連上。
+    </section>
+  </main>
+</body>
+</html>
