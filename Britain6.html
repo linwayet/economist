@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星愛東北五色夢幻 — 仙台旅行相冊 2026</title>
+<style>
+:root {
+  --cream: #FFF8F0;
+  --warm1: #FAF0E0;
+  --amber: #D4872E;
+  --amber2: #E8A84A;
+  --rust: #C0522A;
+  --terra: #C4673A;
+  --gold: #C9952A;
+  --gold2: #F0C060;
+  --brown: #6B3F1E;
+  --brown2: #8B5E3C;
+  --text: #3A2010;
+  --textb: #5A3820;
+  --textl: #8B6040;
+  --border: #E0C4A0;
+  --shadow: rgba(180,100,40,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--warm1);color:var(--textb);font-family:"Noto Serif TC","PingFang TC","Microsoft JhengHei",serif;min-height:100vh;}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(145deg,#6B3F1E 0%,#A86020 30%,#C9952A 60%,#C0522A 100%);
+  color:#FFF8F0;padding:48px 20px 40px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 72C22.3 72 8 57.7 8 40S22.3 8 40 8s32 14.3 32 32-14.3 32-32 32z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.35);
+  border-radius:24px;padding:5px 18px;font-size:13px;letter-spacing:2px;margin-bottom:14px;position:relative;}
+.hero h1{font-size:clamp(22px,6vw,36px);font-weight:700;letter-spacing:2px;position:relative;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,0.2);}
+.hero-sub{font-size:14px;opacity:0.85;line-height:2;position:relative;}
+.hero-dates{margin-top:14px;font-size:13px;opacity:0.7;letter-spacing:1px;position:relative;}
+
+/* ── STICKY NAV ── */
+.day-nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--brown);
+  display:flex;overflow-x:auto;
+  gap:0;border-bottom:3px solid var(--gold);
+}
+.day-nav::-webkit-scrollbar{height:3px;} 
+.day-nav::-webkit-scrollbar-thumb{background:var(--gold2);}
+.day-nav a{
+  color:#F5DEB3;text-decoration:none;
+  padding:13px 20px;font-size:13px;white-space:nowrap;
+  letter-spacing:0.5px;transition:all 0.2s;font-weight:500;
+  border-bottom:3px solid transparent;margin-bottom:-3px;
+}
+.day-nav a:hover{background:rgba(255,255,255,0.1);color:#fff;}
+.day-nav a.active{background:rgba(255,255,255,0.12);color:var(--gold2);border-bottom-color:var(--gold2);}
+
+/* ── MAIN WRAPPER ── */
+.main{max-width:1100px;margin:0 auto;padding:0 12px;}
+
+/* ── DAY SECTION ── */
+.day-section{padding:36px 0 24px;}
+.day-header{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:28px;padding-bottom:16px;
+  border-bottom:2px solid var(--border);
+}
+.day-badge{
+  min-width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(145deg,var(--rust),var(--terra));
+  color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-weight:700;box-shadow:0 4px 16px var(--shadow);flex-shrink:0;
+}
+.day-badge .dn{font-size:30px;line-height:1;}
+.day-badge .dt{font-size:10px;opacity:0.85;letter-spacing:0.5px;}
+.day-title-block h2{font-size:clamp(17px,4vw,24px);color:var(--text);margin-bottom:4px;}
+.day-title-block .day-date{font-size:13px;color:var(--amber);font-weight:600;}
+.day-title-block .day-summary{font-size:13px;color:var(--textl);margin-top:4px;line-height:1.6;}
+
+/* ── ROUTE MAP ── */
+.route-wrap{
+  background:#FDF6EC;border:1px solid var(--border);border-radius:16px;
+  padding:24px 16px 20px;margin-bottom:32px;
+  box-shadow:0 3px 12px var(--shadow);overflow:hidden;
+}
+.route-label{font-size:12px;color:var(--amber);font-weight:700;letter-spacing:1.5px;margin-bottom:16px;text-align:center;}
+.route-svg{width:100%;overflow-x:auto;display:block;}
+
+/* ── LOCATION BLOCK ── */
+.loc-block{margin-bottom:36px;}
+.loc-header{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding:10px 16px;background:#FDF6EC;border-radius:12px;border-left:5px solid var(--gold);
+  box-shadow:0 2px 8px var(--shadow);
+}
+.loc-icon{font-size:24px;flex-shrink:0;}
+.loc-name{font-size:16px;font-weight:700;color:var(--rust);}
+.loc-subtitle{font-size:12px;color:var(--textl);margin-top:2px;}
+.loc-badge{
+  margin-left:auto;font-size:11px;padding:3px 10px;border-radius:20px;
+  background:#F5E0C0;color:var(--brown);font-weight:600;white-space:nowrap;
+}
+
+/* ── SPOT INFO ── */
+.spot-info{
+  background:linear-gradient(135deg,#FFF8F0,#FDF6EC);
+  border:1px solid var(--border);border-radius:12px;
+  padding:14px 16px;margin-bottom:14px;
+  font-size:13.5px;line-height:1.9;color:var(--textb);
+}
+.spot-info strong{color:var(--rust);}
+
+/* ── TEXT BLOCK (no photos) ── */
+.text-note{
+  background:#FFF3E0;border:1px dashed var(--gold2);border-radius:10px;
+  padding:12px 16px;font-size:13px;color:var(--brown2);line-height:1.8;
+  margin-bottom:14px;
+}
+.text-note .tn-icon{font-size:18px;margin-right:6px;}
+
+/* ── PHOTO GRID ── */
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:8px;margin-bottom:4px;
+}
+.photo-item{
+  position:relative;overflow:hidden;border-radius:10px;
+  aspect-ratio:4/3;cursor:pointer;
+  box-shadow:0 2px 8px var(--shadow);
+  transition:transform 0.25s,box-shadow 0.25s;
+  background:#F5DEB3;
+}
+.photo-item:hover{transform:scale(1.03);box-shadow:0 6px 20px var(--shadow);}
+.photo-item img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;transition:transform 0.3s;
+}
+.photo-item:hover img{transform:scale(1.06);}
+.photo-item .photo-num{
+  position:absolute;top:6px;right:6px;
+  background:rgba(107,63,30,0.75);color:#fff;
+  font-size:10px;padding:2px 7px;border-radius:10px;backdrop-filter:blur(4px);
+}
+
+/* ── LIGHTBOX ── */
+.lb{display:none;position:fixed;inset:0;background:rgba(50,25,0,0.92);z-index:999;
+  align-items:center;justify-content:center;flex-direction:column;padding:20px;}
+.lb.open{display:flex;}
+.lb-img{max-width:94vw;max-height:84vh;border-radius:10px;object-fit:contain;
+  box-shadow:0 8px 40px rgba(0,0,0,0.6);}
+.lb-caption{color:#F5DEB3;font-size:13px;margin-top:12px;text-align:center;}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,0.15);border:none;border-radius:50%;
+  width:48px;height:48px;font-size:22px;color:#fff;cursor:pointer;
+  transition:background 0.2s;display:flex;align-items:center;justify-content:center;}
+.lb-nav:hover{background:rgba(255,255,255,0.3);}
+.lb-prev{left:12px;} .lb-next{right:12px;}
+.lb-close{position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.15);
+  border:none;border-radius:50%;width:40px;height:40px;font-size:20px;
+  color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lb-close:hover{background:rgba(255,255,255,0.3);}
+.lb-counter{position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  color:#F5DEB3;font-size:12px;background:rgba(0,0,0,0.4);
+  padding:3px 12px;border-radius:12px;}
+
+/* ── WAVE DIVIDER ── */
+.wave{height:10px;background:repeating-linear-gradient(90deg,var(--amber) 0,var(--gold) 20px,var(--amber2) 40px,var(--amber) 60px);opacity:0.25;margin:0;}
+
+/* ── FOOTER ── */
+footer{background:var(--brown);color:rgba(255,255,255,0.65);text-align:center;
+  padding:28px 16px;font-size:12px;line-height:2;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .photo-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));}
+  .lb-nav{width:38px;height:38px;font-size:18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🌸 日本東北 · 宮城 · 山形 · 福島</div>
+  <h1>星愛東北五色夢幻<br>仙台旅行相冊</h1>
+  <div class="hero-sub">魔女之瞳藏王御釜 · 銀山溫泉古街 · 金蛇水神社<br>大內宿 · 會津鐵道 · 豬苗代湖 · 仙台一番街</div>
+  <div class="hero-dates">✈ 2026年5月8日（五）— 5月12日（二）｜星宇航空 JX862／JX863</div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="day-nav" id="dayNav">
+  <a href="#day1" class="active">第1天 5/8<br>✈ 出發·仙台一番街</a>
+  <a href="#day2">第2天 5/9<br>🌸 銀山溫泉·金蛇神社</a>
+  <a href="#day3">第3天 5/10<br>🌷 陸奧公園·藏王御釜</a>
+  <a href="#day4">第4天 5/11<br>🏘️ 大內宿·會津鐵道</a>
+</nav>
+
+<div class="main">
+
+<!-- ═══════════════ DAY 1 ═══════════════ -->
+<section class="day-section" id="day1">
+<div class="day-header">
+  <div class="day-badge"><div class="dn">1</div><div class="dt">第一天</div></div>
+  <div class="day-title-block">
+    <div class="day-date">2026年5月8日（五）</div>
+    <h2>台北 → 仙台空港 → 仙台一番街</h2>
+    <div class="day-summary">🌅 早餐自理 &nbsp;|&nbsp; ☀️ 中餐：機上簡餐 &nbsp;|&nbsp; 🌙 晚餐自理<br>🏨 ドーミーイン仙台シーサイド</div>
+  </div>
+</div>
+
+<!-- Route Map Day 1 -->
+<div class="route-wrap">
+  <div class="route-label">📍 第一天移動路線</div>
+  <svg class="route-svg" viewBox="0 0 820 120" xmlns="http://www.w3.org/2000/svg" style="min-width:500px;">
+    <defs>
+      <marker id="arr1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#D4872E"/>
+      </marker>
+    </defs>
+    <!-- Timeline line -->
+    <line x1="80" y1="60" x2="740" y2="60" stroke="#E8C080" stroke-width="2" stroke-dasharray="6,4"/>
+    <!-- Nodes -->
+    <circle cx="80" cy="60" r="26" fill="#C0522A" opacity="0.9"/>
+    <text x="80" y="55" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🛫</text>
+    <text x="80" y="68" text-anchor="middle" fill="white" font-size="9">出發</text>
+    <text x="80" y="98" text-anchor="middle" fill="#6B3F1E" font-size="11" font-weight="600">桃園機場</text>
+    <text x="80" y="112" text-anchor="middle" fill="#8B6040" font-size="10">11:35起飛</text>
+    
+    <rect x="175" y="42" width="90" height="36" rx="10" fill="#E8A84A" opacity="0.85"/>
+    <text x="220" y="57" text-anchor="middle" fill="white" font-size="10" font-weight="bold">✈ JX862</text>
+    <text x="220" y="70" text-anchor="middle" fill="white" font-size="9">機上簡餐</text>
+    
+    <circle cx="350" cy="60" r="26" fill="#C9952A" opacity="0.9"/>
+    <text x="350" y="55" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🛬</text>
+    <text x="350" y="68" text-anchor="middle" fill="white" font-size="9">抵達</text>
+    <text x="350" y="98" text-anchor="middle" fill="#6B3F1E" font-size="11" font-weight="600">仙台空港</text>
+    <text x="350" y="112" text-anchor="middle" fill="#8B6040" font-size="10">16:00落地</text>
+    
+    <circle cx="500" cy="60" r="26" fill="#8B5E3C" opacity="0.9"/>
+    <text x="500" y="55" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🏨</text>
+    <text x="500" y="68" text-anchor="middle" fill="white" font-size="9">入住</text>
+    <text x="500" y="98" text-anchor="middle" fill="#6B3F1E" font-size="11" font-weight="600">ドーミーイン</text>
+    <text x="500" y="112" text-anchor="middle" fill="#8B6040" font-size="10">仙台シーサイド</text>
+    
+    <circle cx="660" cy="60" r="26" fill="#C0522A" opacity="0.9"/>
+    <text x="660" y="55" text-anchor="middle" fill="white" font-size="13" font-weight="bold">🛍️</text>
+    <text x="660" y="68" text-anchor="middle" fill="white" font-size="9">自由</text>
+    <text x="660" y="98" text-anchor="middle" fill="#6B3F1E" font-size="11" font-weight="600">仙台一番街</text>
+    <text x="660" y="112" text-anchor="middle" fill="#8B6040" font-size="10">晚間自由</text>
+    
+    <!-- Arrows -->
+    <line x1="106" y1="60" x2="172" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr1)"/>
+    <line x1="270" y1="60" x2="322" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr1)"/>
+    <line x1="376" y1="60" x2="472" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr1)"/>
+    <line x1="526" y1="60" x2="632" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr1)"/>
+  </svg>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🛫</span>
+  <div>
+    <div class="loc-name">桃園國際機場 出發</div>
+    <div class="loc-subtitle">集合辦理出境，搭乘星宇航空直飛仙台</div>
+  </div>
+  <span class="loc-badge">5/8 上午</span>
+</div>
+<div class="text-note"><span class="tn-icon">ℹ️</span>清晨集合於桃園中正機場第一航廈，辦理出境手續後搭乘 <strong>星宇航空 JX862</strong> 直飛仙台空港，預計飛行時間約3小時。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0688.jpg','IMG_0688.jpg',this)">
+    <img src="IMG_0688.jpg" alt="IMG_0688.jpg" loading="lazy">
+    <span class="photo-num">1/2</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0690.jpg','IMG_0690.jpg',this)">
+    <img src="IMG_0690.jpg" alt="IMG_0690.jpg" loading="lazy">
+    <span class="photo-num">2/2</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">✈️</span>
+  <div>
+    <div class="loc-name">飛機上</div>
+    <div class="loc-subtitle">仙台直飛，機上簡餐</div>
+  </div>
+  <span class="loc-badge">約3小時</span>
+</div>
+<div class="text-note"><span class="tn-icon">🍱</span>搭乘星宇航空 JX862 從台灣桃園直飛仙台空港，機上享用簡餐，欣賞雲層之上的藍天景致。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0697.JPG','IMG_0697.JPG',this)">
+    <img src="IMG_0697.JPG" alt="IMG_0697.JPG" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0699.JPG','IMG_0699.JPG',this)">
+    <img src="IMG_0699.JPG" alt="IMG_0699.JPG" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0702.JPG','IMG_0702.JPG',this)">
+    <img src="IMG_0702.JPG" alt="IMG_0702.JPG" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0703.JPG','IMG_0703.JPG',this)">
+    <img src="IMG_0703.JPG" alt="IMG_0703.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0710.JPG','IMG_0710.JPG',this)">
+    <img src="IMG_0710.JPG" alt="IMG_0710.JPG" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🚌</span>
+  <div>
+    <div class="loc-name">仙台空港抵達 → 車上風景</div>
+    <div class="loc-subtitle">搭乘遊覽車前往飯店，沿途初探仙台風貌</div>
+  </div>
+  <span class="loc-badge">5/8 下午</span>
+</div>
+<div class="text-note"><span class="tn-icon">🗺️</span>順利降落仙台空港（16:00），通關取行李後搭乘遊覽車前往飯店。沿途窗外是初夏的東北田野與城市景色，令人興奮地感受到旅途正式開始。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0712.jpg','IMG_0712.jpg',this)">
+    <img src="IMG_0712.jpg" alt="IMG_0712.jpg" loading="lazy">
+    <span class="photo-num">1/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0715.jpg','IMG_0715.jpg',this)">
+    <img src="IMG_0715.jpg" alt="IMG_0715.jpg" loading="lazy">
+    <span class="photo-num">2/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0717.JPG','IMG_0717.JPG',this)">
+    <img src="IMG_0717.JPG" alt="IMG_0717.JPG" loading="lazy">
+    <span class="photo-num">3/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0721.JPG','IMG_0721.JPG',this)">
+    <img src="IMG_0721.JPG" alt="IMG_0721.JPG" loading="lazy">
+    <span class="photo-num">4/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0723.jpg','IMG_0723.jpg',this)">
+    <img src="IMG_0723.jpg" alt="IMG_0723.jpg" loading="lazy">
+    <span class="photo-num">5/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0731.JPG','IMG_0731.JPG',this)">
+    <img src="IMG_0731.JPG" alt="IMG_0731.JPG" loading="lazy">
+    <span class="photo-num">6/6</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🏨</span>
+  <div>
+    <div class="loc-name">ドーミーイン仙台シーサイド</div>
+    <div class="loc-subtitle">TEL: 022-388-5489</div>
+  </div>
+  <span class="loc-badge">住宿</span>
+</div>
+<div class="spot-info">入住第一晚的飯店 <strong>ドーミーイン仙台シーサイド</strong>，位於仙台近海地區。ドーミーイン是日本人氣商務飯店連鎖，以高品質大浴場、豐盛早餐聞名，每間客房乾淨舒適，是旅途中的溫馨歸宿。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0733.JPG','IMG_0733.JPG',this)">
+    <img src="IMG_0733.JPG" alt="IMG_0733.JPG" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0734.JPG','IMG_0734.JPG',this)">
+    <img src="IMG_0734.JPG" alt="IMG_0734.JPG" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0736.JPG','IMG_0736.JPG',this)">
+    <img src="IMG_0736.JPG" alt="IMG_0736.JPG" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0737.JPG','IMG_0737.JPG',this)">
+    <img src="IMG_0737.JPG" alt="IMG_0737.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0738.JPG','IMG_0738.JPG',this)">
+    <img src="IMG_0738.JPG" alt="IMG_0738.JPG" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🛍️</span>
+  <div>
+    <div class="loc-name">仙台一番街 — 夜間自由活動</div>
+    <div class="loc-subtitle">以仙台車站為中心的購物購物精華區</div>
+  </div>
+  <span class="loc-badge">5/8 晚間</span>
+</div>
+<div class="spot-info">
+<strong>仙台一番街</strong>是以仙台車站為中心展開的熱鬧商店街，百貨商城、時尚店鋪、餐廳咖啡廳林立。
+東北地區最具規模的繁華商業街，傍晚起燈火輝煌，感受東北夜生活的熱情活力。
+<br><br>📌 本日亮點：原訂第二天的一番街行程調整至第一天晚間，大夥兒抵達仙台後立即體驗東北最熱鬧的夜晚！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0745.JPG','IMG_0745.JPG',this)">
+    <img src="IMG_0745.JPG" alt="IMG_0745.JPG" loading="lazy">
+    <span class="photo-num">1/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0749.jpg','IMG_0749.jpg',this)">
+    <img src="IMG_0749.jpg" alt="IMG_0749.jpg" loading="lazy">
+    <span class="photo-num">2/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0754.jpg','IMG_0754.jpg',this)">
+    <img src="IMG_0754.jpg" alt="IMG_0754.jpg" loading="lazy">
+    <span class="photo-num">3/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0758.JPG','IMG_0758.JPG',this)">
+    <img src="IMG_0758.JPG" alt="IMG_0758.JPG" loading="lazy">
+    <span class="photo-num">4/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0763.jpg','IMG_0763.jpg',this)">
+    <img src="IMG_0763.jpg" alt="IMG_0763.jpg" loading="lazy">
+    <span class="photo-num">5/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0766.jpg','IMG_0766.jpg',this)">
+    <img src="IMG_0766.jpg" alt="IMG_0766.jpg" loading="lazy">
+    <span class="photo-num">6/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0768.jpg','IMG_0768.jpg',this)">
+    <img src="IMG_0768.jpg" alt="IMG_0768.jpg" loading="lazy">
+    <span class="photo-num">7/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0770.jpg','IMG_0770.jpg',this)">
+    <img src="IMG_0770.jpg" alt="IMG_0770.jpg" loading="lazy">
+    <span class="photo-num">8/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0771.jpg','IMG_0771.jpg',this)">
+    <img src="IMG_0771.jpg" alt="IMG_0771.jpg" loading="lazy">
+    <span class="photo-num">9/9</span>
+  </div>
+</div>
+</div>
+</section><div class="wave"></div>
+
+<!-- ═══════════════ DAY 2 ═══════════════ -->
+<section class="day-section" id="day2">
+<div class="day-header">
+  <div class="day-badge"><div class="dn">2</div><div class="dt">第二天</div></div>
+  <div class="day-title-block">
+    <div class="day-date">2026年5月9日（六）</div>
+    <h2>銀山溫泉古街 · 足湯 · 金蛇水神社</h2>
+    <div class="day-summary">🌅 早餐：飯店內用 &nbsp;|&nbsp; ☀️ 中餐：山形牛風味餐 &nbsp;|&nbsp; 🌙 晚餐自理<br>🏨 ドーミーイン仙台シーサイド（連住）</div>
+  </div>
+</div>
+
+<!-- Route Map Day 2 -->
+<div class="route-wrap">
+  <div class="route-label">📍 第二天移動路線</div>
+  <svg class="route-svg" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg" style="min-width:560px;">
+    <defs>
+      <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#D4872E"/>
+      </marker>
+    </defs>
+    <line x1="70" y1="60" x2="820" y2="60" stroke="#E8C080" stroke-width="2" stroke-dasharray="6,4"/>
+    
+    <circle cx="70" cy="60" r="26" fill="#8B5E3C" opacity="0.9"/>
+    <text x="70" y="55" text-anchor="middle" fill="white" font-size="14">🏨</text>
+    <text x="70" y="68" text-anchor="middle" fill="white" font-size="9">出發</text>
+    <text x="70" y="98" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">仙台飯店</text>
+    
+    <circle cx="240" cy="60" r="26" fill="#C9952A" opacity="0.9"/>
+    <text x="240" y="55" text-anchor="middle" fill="white" font-size="14">🌸</text>
+    <text x="240" y="68" text-anchor="middle" fill="white" font-size="9">散策</text>
+    <text x="240" y="98" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">銀山溫泉</text>
+    <text x="240" y="112" text-anchor="middle" fill="#8B6040" font-size="9">山形縣尾花澤市</text>
+    
+    <rect x="330" y="43" width="78" height="34" rx="9" fill="#E8A84A" opacity="0.85"/>
+    <text x="369" y="57" text-anchor="middle" fill="white" font-size="9" font-weight="bold">🍖 山形牛</text>
+    <text x="369" y="69" text-anchor="middle" fill="white" font-size="9">午間風味餐</text>
+    
+    <circle cx="480" cy="60" r="26" fill="#C0522A" opacity="0.9"/>
+    <text x="480" y="55" text-anchor="middle" fill="white" font-size="14">🐍</text>
+    <text x="480" y="68" text-anchor="middle" fill="white" font-size="9">參拜</text>
+    <text x="480" y="98" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">金蛇水神社</text>
+    <text x="480" y="112" text-anchor="middle" fill="#8B6040" font-size="9">財運NO.1</text>
+    
+    <circle cx="660" cy="60" r="26" fill="#C9952A" opacity="0.9"/>
+    <text x="660" y="55" text-anchor="middle" fill="white" font-size="14">🌙</text>
+    <text x="660" y="68" text-anchor="middle" fill="white" font-size="9">晚餐</text>
+    <text x="660" y="98" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">仙台市區</text>
+    <text x="660" y="112" text-anchor="middle" fill="#8B6040" font-size="9">自理晚餐</text>
+    
+    <circle cx="820" cy="60" r="26" fill="#8B5E3C" opacity="0.9"/>
+    <text x="820" y="55" text-anchor="middle" fill="white" font-size="14">🏨</text>
+    <text x="820" y="68" text-anchor="middle" fill="white" font-size="9">返回</text>
+    <text x="820" y="98" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">仙台飯店</text>
+    
+    <line x1="96" y1="60" x2="212" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="266" y1="60" x2="328" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="410" y1="60" x2="452" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="506" y1="60" x2="632" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr2)"/>
+    <line x1="686" y1="60" x2="792" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr2)"/>
+  </svg>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🍳</span>
+  <div>
+    <div class="loc-name">飯店早餐 — ドーミーイン</div>
+    <div class="loc-subtitle">仙台シーサイド飯店內用早餐</div>
+  </div>
+  <span class="loc-badge">5/9 早晨</span>
+</div>
+<div class="text-note"><span class="tn-icon">☕</span>ドーミーイン招牌豐盛早餐，有多種日式與西式選擇，備好體力迎接精彩的第二天！</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0777.jpg','IMG_0777.jpg',this)">
+    <img src="IMG_0777.jpg" alt="IMG_0777.jpg" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0783.JPG','IMG_0783.JPG',this)">
+    <img src="IMG_0783.JPG" alt="IMG_0783.JPG" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0788.JPG','IMG_0788.JPG',this)">
+    <img src="IMG_0788.JPG" alt="IMG_0788.JPG" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0791.JPG','IMG_0791.JPG',this)">
+    <img src="IMG_0791.JPG" alt="IMG_0791.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0793.JPG','IMG_0793.JPG',this)">
+    <img src="IMG_0793.JPG" alt="IMG_0793.JPG" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌸</span>
+  <div>
+    <div class="loc-name">銀山溫泉古街散策 + 足湯</div>
+    <div class="loc-subtitle">山形縣尾花澤市 — 大正浪漫の世界</div>
+  </div>
+  <span class="loc-badge">5/9 上午</span>
+</div>
+<div class="spot-info">
+<strong>銀山溫泉</strong>是與宮城縣鄰接的山形縣尾花澤市一處溫泉鄉，沿著銀山川溪谷而建，兩旁排列著3至4層樓的<strong>大正浪漫木造旅館</strong>，氛圍宛如世外桃源。500多年前此地發現銀礦因而得名，白銀瀑布（落差22公尺）、洗心峽、延澤銀礦坑皆在步行範圍內。
+<br><br>🌟 此地也是電視劇「<strong>阿信</strong>」的取景故鄉，日本NHK晨間劇的經典背景。<br>
+💧 溪邊設有足湯，可免費泡腳，享受純正東北溫泉！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0808.JPG','IMG_0808.JPG',this)">
+    <img src="IMG_0808.JPG" alt="IMG_0808.JPG" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0815.JPG','IMG_0815.JPG',this)">
+    <img src="IMG_0815.JPG" alt="IMG_0815.JPG" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0820.JPG','IMG_0820.JPG',this)">
+    <img src="IMG_0820.JPG" alt="IMG_0820.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0827.JPG','IMG_0827.JPG',this)">
+    <img src="IMG_0827.JPG" alt="IMG_0827.JPG" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0836.JPG','IMG_0836.JPG',this)">
+    <img src="IMG_0836.JPG" alt="IMG_0836.JPG" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0843.JPG','IMG_0843.JPG',this)">
+    <img src="IMG_0843.JPG" alt="IMG_0843.JPG" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0851.jpg','IMG_0851.jpg',this)">
+    <img src="IMG_0851.jpg" alt="IMG_0851.jpg" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0860.JPG','IMG_0860.JPG',this)">
+    <img src="IMG_0860.JPG" alt="IMG_0860.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0871.jpg','IMG_0871.jpg',this)">
+    <img src="IMG_0871.jpg" alt="IMG_0871.jpg" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0882.jpg','IMG_0882.jpg',this)">
+    <img src="IMG_0882.jpg" alt="IMG_0882.jpg" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🍖</span>
+  <div>
+    <div class="loc-name">山形牛風味中餐</div>
+    <div class="loc-subtitle">品嚐山形縣名產和牛料理</div>
+  </div>
+  <span class="loc-badge">5/9 中午</span>
+</div>
+<div class="spot-info"><strong>山形牛</strong>是日本三大和牛產地之一，肉質細嫩、油脂分佈均勻，帶有獨特的甘甜風味。中餐以山形牛為主角，搭配當地新鮮食材，是本次行程的美食亮點。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0894.jpg','IMG_0894.jpg',this)">
+    <img src="IMG_0894.jpg" alt="IMG_0894.jpg" loading="lazy">
+    <span class="photo-num">1/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0897.jpg','IMG_0897.jpg',this)">
+    <img src="IMG_0897.jpg" alt="IMG_0897.jpg" loading="lazy">
+    <span class="photo-num">2/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0899.jpg','IMG_0899.jpg',this)">
+    <img src="IMG_0899.jpg" alt="IMG_0899.jpg" loading="lazy">
+    <span class="photo-num">3/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0906.JPG','IMG_0906.JPG',this)">
+    <img src="IMG_0906.JPG" alt="IMG_0906.JPG" loading="lazy">
+    <span class="photo-num">4/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0909.JPG','IMG_0909.JPG',this)">
+    <img src="IMG_0909.JPG" alt="IMG_0909.JPG" loading="lazy">
+    <span class="photo-num">5/6</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0912.jpg','IMG_0912.jpg',this)">
+    <img src="IMG_0912.jpg" alt="IMG_0912.jpg" loading="lazy">
+    <span class="photo-num">6/6</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🐍</span>
+  <div>
+    <div class="loc-name">金蛇水神社 — 財運NO.1</div>
+    <div class="loc-subtitle">東北最強能量景點，5月紫藤盛開</div>
+  </div>
+  <span class="loc-badge">5/9 下午</span>
+</div>
+<div class="spot-info">
+<strong>金蛇水神社</strong>供奉「蛇」與「水」之神，自古庇佑生意興隆、財運旺旺，被日本電視雜誌評為「東北最強能量景點」。神社內<strong>金蛇弁財天</strong>具提升財力、智慧與技藝的神德。
+<br><br>🌟 社殿四周擺滿稀有「<strong>蛇紋石</strong>」，用手撫摸後再摸錢包即可增加財運！<br>
+💜 5月正值樹齡約300年的<strong>九龍藤</strong>最佳賞花時期，紫藤花串垂掛，浪漫迷人。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0917.jpg','IMG_0917.jpg',this)">
+    <img src="IMG_0917.jpg" alt="IMG_0917.jpg" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0922.JPG','IMG_0922.JPG',this)">
+    <img src="IMG_0922.JPG" alt="IMG_0922.JPG" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0926.JPG','IMG_0926.JPG',this)">
+    <img src="IMG_0926.JPG" alt="IMG_0926.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0931.JPG','IMG_0931.JPG',this)">
+    <img src="IMG_0931.JPG" alt="IMG_0931.JPG" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0937.JPG','IMG_0937.JPG',this)">
+    <img src="IMG_0937.JPG" alt="IMG_0937.JPG" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0948.JPG','IMG_0948.JPG',this)">
+    <img src="IMG_0948.JPG" alt="IMG_0948.JPG" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0960.JPG','IMG_0960.JPG',this)">
+    <img src="IMG_0960.JPG" alt="IMG_0960.JPG" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0966.JPG','IMG_0966.JPG',this)">
+    <img src="IMG_0966.JPG" alt="IMG_0966.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0984.jpg','IMG_0984.jpg',this)">
+    <img src="IMG_0984.jpg" alt="IMG_0984.jpg" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_0991.JPG','IMG_0991.JPG',this)">
+    <img src="IMG_0991.JPG" alt="IMG_0991.JPG" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌙</span>
+  <div>
+    <div class="loc-name">仙台市區自由晚餐</div>
+    <div class="loc-subtitle">仙台市內自行品嚐東北美食</div>
+  </div>
+  <span class="loc-badge">5/9 晚間</span>
+</div>
+<div class="text-note"><span class="tn-icon">🍽️</span>晚餐自理，可前往仙台市區品嚐知名的<strong>牛舌料理（牛タン）</strong>、毛豆泥（ずんだ）甜點，或仙台各式海鮮料理，東北美食等您探索！</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_0998.jpg','IMG_0998.jpg',this)">
+    <img src="IMG_0998.jpg" alt="IMG_0998.jpg" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1001.jpg','IMG_1001.jpg',this)">
+    <img src="IMG_1001.jpg" alt="IMG_1001.jpg" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1005.jpg','IMG_1005.jpg',this)">
+    <img src="IMG_1005.jpg" alt="IMG_1005.jpg" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1008.JPG','IMG_1008.JPG',this)">
+    <img src="IMG_1008.JPG" alt="IMG_1008.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1011.jpg','IMG_1011.jpg',this)">
+    <img src="IMG_1011.jpg" alt="IMG_1011.jpg" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+</section><div class="wave"></div>
+
+<!-- ═══════════════ DAY 3 ═══════════════ -->
+<section class="day-section" id="day3">
+<div class="day-header">
+  <div class="day-badge"><div class="dn">3</div><div class="dt">第三天</div></div>
+  <div class="day-title-block">
+    <div class="day-date">2026年5月10日（日）</div>
+    <h2>陸奧杜之湖畔 · 藏王天空步道 · 御釜 · 鳴子娃娃</h2>
+    <div class="day-summary">🌅 早餐：飯店內用 &nbsp;|&nbsp; ☀️ 中餐：日式風味餐 &nbsp;|&nbsp; 🌙 晚餐：飯店豪華自助餐<br>🏨 裏磐梯レイクリゾート</div>
+  </div>
+</div>
+
+<!-- Route Map Day 3 -->
+<div class="route-wrap">
+  <div class="route-label">📍 第三天移動路線</div>
+  <svg class="route-svg" viewBox="0 0 1020 130" xmlns="http://www.w3.org/2000/svg" style="min-width:640px;">
+    <defs>
+      <marker id="arr3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#D4872E"/>
+      </marker>
+    </defs>
+    <line x1="60" y1="60" x2="960" y2="60" stroke="#E8C080" stroke-width="2" stroke-dasharray="6,4"/>
+    
+    <circle cx="60" cy="60" r="24" fill="#8B5E3C" opacity="0.9"/>
+    <text x="60" y="55" text-anchor="middle" fill="white" font-size="13">🏨</text>
+    <text x="60" y="68" text-anchor="middle" fill="white" font-size="9">出發</text>
+    <text x="60" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">仙台飯店</text>
+    
+    <circle cx="210" cy="60" r="24" fill="#C9952A" opacity="0.9"/>
+    <text x="210" y="55" text-anchor="middle" fill="white" font-size="13">🌷</text>
+    <text x="210" y="68" text-anchor="middle" fill="white" font-size="9">10萬株</text>
+    <text x="210" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">陸奧杜之</text>
+    <text x="210" y="110" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">湖畔公園</text>
+    
+    <circle cx="370" cy="60" r="24" fill="#C0522A" opacity="0.9"/>
+    <text x="370" y="55" text-anchor="middle" fill="white" font-size="13">🏔️</text>
+    <text x="370" y="68" text-anchor="middle" fill="white" font-size="9">天空</text>
+    <text x="370" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">藏王天空</text>
+    <text x="370" y="110" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">步道</text>
+    
+    <circle cx="510" cy="60" r="24" fill="#A86020" opacity="0.9"/>
+    <text x="510" y="55" text-anchor="middle" fill="white" font-size="13">🌋</text>
+    <text x="510" y="68" text-anchor="middle" fill="white" font-size="9">火口湖</text>
+    <text x="510" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">藏王御釜</text>
+    <text x="510" y="110" text-anchor="middle" fill="#8B6040" font-size="9">海拔1670m</text>
+    
+    <circle cx="660" cy="60" r="24" fill="#C9952A" opacity="0.9"/>
+    <text x="660" y="55" text-anchor="middle" fill="white" font-size="13">🎎</text>
+    <text x="660" y="68" text-anchor="middle" fill="white" font-size="9">體驗</text>
+    <text x="660" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">鳴子娃娃</text>
+    <text x="660" y="110" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">DIY</text>
+    
+    <circle cx="820" cy="60" r="24" fill="#C0522A" opacity="0.9"/>
+    <text x="820" y="55" text-anchor="middle" fill="white" font-size="13">🍽️</text>
+    <text x="820" y="68" text-anchor="middle" fill="white" font-size="9">自助餐</text>
+    <text x="820" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">裏磐梯</text>
+    <text x="820" y="110" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">レイクリゾート</text>
+    
+    <circle cx="960" cy="60" r="24" fill="#8B5E3C" opacity="0.9"/>
+    <text x="960" y="55" text-anchor="middle" fill="white" font-size="13">♨️</text>
+    <text x="960" y="68" text-anchor="middle" fill="white" font-size="9">溫泉</text>
+    <text x="960" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">飯店溫泉</text>
+    
+    <line x1="84" y1="60" x2="184" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+    <line x1="234" y1="60" x2="344" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+    <line x1="394" y1="60" x2="484" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+    <line x1="534" y1="60" x2="634" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+    <line x1="684" y1="60" x2="794" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+    <line x1="844" y1="60" x2="934" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr3)"/>
+  </svg>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🍳</span>
+  <div>
+    <div class="loc-name">飯店早餐 — ドーミーイン</div>
+    <div class="loc-subtitle">仙台シーサイド 豐盛早餐</div>
+  </div>
+  <span class="loc-badge">5/10 早晨</span>
+</div>
+<div class="text-note"><span class="tn-icon">🍱</span>最後一早在ドーミーイン仙台用餐，備足精神，今天是行程最豐富的一天！</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1026.JPG','IMG_1026.JPG',this)">
+    <img src="IMG_1026.JPG" alt="IMG_1026.JPG" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1027.jpg','IMG_1027.jpg',this)">
+    <img src="IMG_1027.jpg" alt="IMG_1027.jpg" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1029.JPG','IMG_1029.JPG',this)">
+    <img src="IMG_1029.JPG" alt="IMG_1029.JPG" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1034.JPG','IMG_1034.JPG',this)">
+    <img src="IMG_1034.JPG" alt="IMG_1034.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1038.jpg','IMG_1038.jpg',this)">
+    <img src="IMG_1038.jpg" alt="IMG_1038.jpg" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌷</span>
+  <div>
+    <div class="loc-name">陸奧杜之湖畔公園</div>
+    <div class="loc-subtitle">東北唯一國營公園 — 10萬株鬱金香盛開</div>
+  </div>
+  <span class="loc-badge">5/10 上午</span>
+</div>
+<div class="spot-info">
+<strong>陸奧杜之湖畔公園</strong>（みちのく杜の湖畔公園）是東北唯一的國營公園，以藏王山脈為背景，廣闊的園區分南區（海濱花壇）、北區（農耕體驗）、里山區。
+<br><br>🌷 5月正值<strong>10萬株鬱金香</strong>盛開時節，各色鬱金香花海在藍天白雲下鮮豔奪目，色彩繽紛壯觀，令人驚嘆！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1042.JPG','IMG_1042.JPG',this)">
+    <img src="IMG_1042.JPG" alt="IMG_1042.JPG" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1049.JPG','IMG_1049.JPG',this)">
+    <img src="IMG_1049.JPG" alt="IMG_1049.JPG" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1057.JPG','IMG_1057.JPG',this)">
+    <img src="IMG_1057.JPG" alt="IMG_1057.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1091.jpg','IMG_1091.jpg',this)">
+    <img src="IMG_1091.jpg" alt="IMG_1091.jpg" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1105.jpg','IMG_1105.jpg',this)">
+    <img src="IMG_1105.jpg" alt="IMG_1105.jpg" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1110.jpg','IMG_1110.jpg',this)">
+    <img src="IMG_1110.jpg" alt="IMG_1110.jpg" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1119.JPG','IMG_1119.JPG',this)">
+    <img src="IMG_1119.JPG" alt="IMG_1119.JPG" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1128.JPG','IMG_1128.JPG',this)">
+    <img src="IMG_1128.JPG" alt="IMG_1128.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1131.jpg','IMG_1131.jpg',this)">
+    <img src="IMG_1131.jpg" alt="IMG_1131.jpg" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1134.jpg','IMG_1134.jpg',this)">
+    <img src="IMG_1134.jpg" alt="IMG_1134.jpg" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🏔️</span>
+  <div>
+    <div class="loc-name">藏王天空步道 — HIGHLINE</div>
+    <div class="loc-subtitle">春季雪之迴廊，壯闊山岳景觀</div>
+  </div>
+  <span class="loc-badge">5/10 上午</span>
+</div>
+<div class="spot-info">
+從藏王ECHO LINE分岐，長約<strong>2.5km</strong>的山岳觀光有料道路（4月下旬～11月初旬開通）。<br>
+🌨️ 春天<strong>雪之迴廊</strong>：道路兩側高達數公尺的積雪牆，如走在巨大白色峽谷中；<br>
+🌿 夏天滿山新綠；🍁 秋天鮮明紅葉 — 四季景觀絕美！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1139.jpg','IMG_1139.jpg',this)">
+    <img src="IMG_1139.jpg" alt="IMG_1139.jpg" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1143.JPG','IMG_1143.JPG',this)">
+    <img src="IMG_1143.JPG" alt="IMG_1143.JPG" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1146.jpg','IMG_1146.jpg',this)">
+    <img src="IMG_1146.jpg" alt="IMG_1146.jpg" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1149.jpg','IMG_1149.jpg',this)">
+    <img src="IMG_1149.jpg" alt="IMG_1149.jpg" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1153.jpg','IMG_1153.jpg',this)">
+    <img src="IMG_1153.jpg" alt="IMG_1153.jpg" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌋</span>
+  <div>
+    <div class="loc-name">藏王御釜 · 鳥居展望台</div>
+    <div class="loc-subtitle">魔女之瞳 — 海拔1,670公尺的神秘火口湖</div>
+  </div>
+  <span class="loc-badge">5/10 午前</span>
+</div>
+<div class="spot-info">
+<strong>藏王御釜</strong>（お釜）海拔1,670公尺，由刈田岳、熊野岳、五色岳三山環抱的<strong>火口湖</strong>。湖水含有強酸性成分，依陽光折射呈現翠綠、寶藍等夢幻色調，被稱為「<strong>魔女之瞳</strong>」。
+<br><br>📏 湖周長約1公里，最深27.6公尺。<br>
+🌈 陳綺貞「<strong>殘缺的彩虹</strong>」MV即在此地取景！<br>
+⚠️ 山頂氣溫低，請保暖；山路鬆滑，注意安全。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1157.JPG','IMG_1157.JPG',this)">
+    <img src="IMG_1157.JPG" alt="IMG_1157.JPG" loading="lazy">
+    <span class="photo-num">1/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1161.JPG','IMG_1161.JPG',this)">
+    <img src="IMG_1161.JPG" alt="IMG_1161.JPG" loading="lazy">
+    <span class="photo-num">2/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1163.jpg','IMG_1163.jpg',this)">
+    <img src="IMG_1163.jpg" alt="IMG_1163.jpg" loading="lazy">
+    <span class="photo-num">3/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1164.jpg','IMG_1164.jpg',this)">
+    <img src="IMG_1164.jpg" alt="IMG_1164.jpg" loading="lazy">
+    <span class="photo-num">4/4</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🍽️</span>
+  <div>
+    <div class="loc-name">日式風味中餐</div>
+    <div class="loc-subtitle">品嚐東北特色料理</div>
+  </div>
+  <span class="loc-badge">5/10 中午</span>
+</div>
+<div class="text-note"><span class="tn-icon">🍣</span>享用精緻日式風味午餐，補充體力繼續下午的精彩行程。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1166.jpg','IMG_1166.jpg',this)">
+    <img src="IMG_1166.jpg" alt="IMG_1166.jpg" loading="lazy">
+    <span class="photo-num">1/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1174.jpg','IMG_1174.jpg',this)">
+    <img src="IMG_1174.jpg" alt="IMG_1174.jpg" loading="lazy">
+    <span class="photo-num">2/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1193.JPG','IMG_1193.JPG',this)">
+    <img src="IMG_1193.JPG" alt="IMG_1193.JPG" loading="lazy">
+    <span class="photo-num">3/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1200.JPG','IMG_1200.JPG',this)">
+    <img src="IMG_1200.JPG" alt="IMG_1200.JPG" loading="lazy">
+    <span class="photo-num">4/5</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1207.JPG','IMG_1207.JPG',this)">
+    <img src="IMG_1207.JPG" alt="IMG_1207.JPG" loading="lazy">
+    <span class="photo-num">5/5</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🎎</span>
+  <div>
+    <div class="loc-name">鳴子娃娃 DIY 彩繪體驗</div>
+    <div class="loc-subtitle">東北傳統工藝 — 小芥子木偶</div>
+  </div>
+  <span class="loc-badge">5/10 下午</span>
+</div>
+<div class="spot-info">
+<strong>鳴子木偶（鳴子こけし）</strong>是東北地區獨特的傳統工藝品，木偶的脖子可以轉動並發出「啾啾」的清脆聲響，因此得名「鳴子」。
+<br><br>🎨 親手彩繪屬於自己的小芥子木偶，將旅行記憶帶回家。每一隻都是獨一無二的紀念品！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1221.JPG','IMG_1221.JPG',this)">
+    <img src="IMG_1221.JPG" alt="IMG_1221.JPG" loading="lazy">
+    <span class="photo-num">1/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1229.JPG','IMG_1229.JPG',this)">
+    <img src="IMG_1229.JPG" alt="IMG_1229.JPG" loading="lazy">
+    <span class="photo-num">2/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1236.JPG','IMG_1236.JPG',this)">
+    <img src="IMG_1236.JPG" alt="IMG_1236.JPG" loading="lazy">
+    <span class="photo-num">3/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1240.JPG','IMG_1240.JPG',this)">
+    <img src="IMG_1240.JPG" alt="IMG_1240.JPG" loading="lazy">
+    <span class="photo-num">4/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1243.JPG','IMG_1243.JPG',this)">
+    <img src="IMG_1243.JPG" alt="IMG_1243.JPG" loading="lazy">
+    <span class="photo-num">5/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1248.JPG','IMG_1248.JPG',this)">
+    <img src="IMG_1248.JPG" alt="IMG_1248.JPG" loading="lazy">
+    <span class="photo-num">6/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1254.JPG','IMG_1254.JPG',this)">
+    <img src="IMG_1254.JPG" alt="IMG_1254.JPG" loading="lazy">
+    <span class="photo-num">7/8</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1256.JPG','IMG_1256.JPG',this)">
+    <img src="IMG_1256.JPG" alt="IMG_1256.JPG" loading="lazy">
+    <span class="photo-num">8/8</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🚌</span>
+  <div>
+    <div class="loc-name">車上風景 — 前往裏磐梯</div>
+    <div class="loc-subtitle">從宮城移動至福島縣裏磐梯地區</div>
+  </div>
+  <span class="loc-badge">5/10 傍晚</span>
+</div>
+<div class="text-note"><span class="tn-icon">🗾</span>搭乘遊覽車從宮城縣移動至福島縣裏磐梯地區，沿途欣賞東北初夏的山野景色，約2小時車程。窗外連綿的山脈與盆地相互交替，是寧靜的移動時光。</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🏨</span>
+  <div>
+    <div class="loc-name">裏磐梯レイクリゾート — 豪華自助晚餐</div>
+    <div class="loc-subtitle">TEL: 0241-37-1111 ｜ 五星級溫泉飯店</div>
+  </div>
+  <span class="loc-badge">5/10 晚間</span>
+</div>
+<div class="spot-info">
+<strong>裏磐梯レイクリゾート</strong>是位於五色沼旁的高級溫泉度假飯店，依傍磐梯山與高原湖泊，景色極為優美。
+<br>🍽️ 今晚的<strong>豪華自助晚餐</strong>匯集了多種日式、西式料理，現場烹調，種類豐富。<br>
+♨️ 飯店設有天然溫泉大浴場，泡完溫泉神清氣爽，最適合消除旅途疲勞！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1285.jpg','IMG_1285.jpg',this)">
+    <img src="IMG_1285.jpg" alt="IMG_1285.jpg" loading="lazy">
+    <span class="photo-num">1/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1290.JPG','IMG_1290.JPG',this)">
+    <img src="IMG_1290.JPG" alt="IMG_1290.JPG" loading="lazy">
+    <span class="photo-num">2/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1296.JPG','IMG_1296.JPG',this)">
+    <img src="IMG_1296.JPG" alt="IMG_1296.JPG" loading="lazy">
+    <span class="photo-num">3/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1298.JPG','IMG_1298.JPG',this)">
+    <img src="IMG_1298.JPG" alt="IMG_1298.JPG" loading="lazy">
+    <span class="photo-num">4/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1301.JPG','IMG_1301.JPG',this)">
+    <img src="IMG_1301.JPG" alt="IMG_1301.JPG" loading="lazy">
+    <span class="photo-num">5/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1305.JPG','IMG_1305.JPG',this)">
+    <img src="IMG_1305.JPG" alt="IMG_1305.JPG" loading="lazy">
+    <span class="photo-num">6/7</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1309.JPG','IMG_1309.JPG',this)">
+    <img src="IMG_1309.JPG" alt="IMG_1309.JPG" loading="lazy">
+    <span class="photo-num">7/7</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">♨️</span>
+  <div>
+    <div class="loc-name">飯店溫泉 — 裏磐梯の湯</div>
+    <div class="loc-subtitle">享受東北純正溫泉，洗去旅途疲勞</div>
+  </div>
+  <span class="loc-badge">5/10 晚間</span>
+</div>
+<div class="text-note"><span class="tn-icon">🛁</span>入住裏磐梯レイクリゾート最大亮點之一就是溫泉大浴場。在雲霧繚繞的東北高原上泡湯，望著夜空，是旅途中難忘的放鬆時刻。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1319.JPG','IMG_1319.JPG',this)">
+    <img src="IMG_1319.JPG" alt="IMG_1319.JPG" loading="lazy">
+    <span class="photo-num">1/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1320.JPG','IMG_1320.JPG',this)">
+    <img src="IMG_1320.JPG" alt="IMG_1320.JPG" loading="lazy">
+    <span class="photo-num">2/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1321.jpg','IMG_1321.jpg',this)">
+    <img src="IMG_1321.jpg" alt="IMG_1321.jpg" loading="lazy">
+    <span class="photo-num">3/3</span>
+  </div>
+</div>
+</div>
+</section><div class="wave"></div>
+
+<!-- ═══════════════ DAY 4 ═══════════════ -->
+<section class="day-section" id="day4">
+<div class="day-header">
+  <div class="day-badge"><div class="dn">4</div><div class="dt">第四天</div></div>
+  <div class="day-title-block">
+    <div class="day-date">2026年5月11日（一）</div>
+    <h2>塔崖 · 大內宿 · 會津鐵道 · 豬苗代湖</h2>
+    <div class="day-summary">🌅 早餐：飯店內用 &nbsp;|&nbsp; ☀️ 中餐：會津郷土料理 &nbsp;|&nbsp; 🌙 晚餐：飯店豪華自助餐<br>🏨 裏磐梯レイクリゾート（連住）</div>
+  </div>
+</div>
+
+<!-- Route Map Day 4 -->
+<div class="route-wrap">
+  <div class="route-label">📍 第四天移動路線</div>
+  <svg class="route-svg" viewBox="0 0 1000 130" xmlns="http://www.w3.org/2000/svg" style="min-width:640px;">
+    <defs>
+      <marker id="arr4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#D4872E"/>
+      </marker>
+    </defs>
+    <line x1="60" y1="60" x2="940" y2="60" stroke="#E8C080" stroke-width="2" stroke-dasharray="6,4"/>
+    
+    <circle cx="60" cy="60" r="24" fill="#8B5E3C" opacity="0.9"/>
+    <text x="60" y="55" text-anchor="middle" fill="white" font-size="13">🏨</text>
+    <text x="60" y="68" text-anchor="middle" fill="white" font-size="9">出發</text>
+    <text x="60" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">裏磐梯</text>
+    
+    <circle cx="210" cy="60" r="24" fill="#C0522A" opacity="0.9"/>
+    <text x="210" y="55" text-anchor="middle" fill="white" font-size="13">🗿</text>
+    <text x="210" y="68" text-anchor="middle" fill="white" font-size="9">奇岩</text>
+    <text x="210" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">塔崖</text>
+    <text x="210" y="110" text-anchor="middle" fill="#8B6040" font-size="9">塔のへつり</text>
+    
+    <circle cx="380" cy="60" r="24" fill="#C9952A" opacity="0.9"/>
+    <text x="380" y="55" text-anchor="middle" fill="white" font-size="13">🏘️</text>
+    <text x="380" y="68" text-anchor="middle" fill="white" font-size="9">茅葺</text>
+    <text x="380" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">大內宿</text>
+    <text x="380" y="110" text-anchor="middle" fill="#8B6040" font-size="9">三大合掌村</text>
+    
+    <rect x="462" y="43" width="82" height="34" rx="9" fill="#E8A84A" opacity="0.85"/>
+    <text x="503" y="57" text-anchor="middle" fill="white" font-size="9" font-weight="bold">🍱 會津</text>
+    <text x="503" y="69" text-anchor="middle" fill="white" font-size="9">郷土料理</text>
+    
+    <circle cx="610" cy="60" r="24" fill="#A86020" opacity="0.9"/>
+    <text x="610" y="55" text-anchor="middle" fill="white" font-size="13">🚂</text>
+    <text x="610" y="68" text-anchor="middle" fill="white" font-size="9">乘車</text>
+    <text x="610" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">會津鐵道</text>
+    <text x="610" y="110" text-anchor="middle" fill="#8B6040" font-size="9">人氣鐵道線</text>
+    
+    <circle cx="780" cy="60" r="24" fill="#C9952A" opacity="0.9"/>
+    <text x="780" y="55" text-anchor="middle" fill="white" font-size="13">🦢</text>
+    <text x="780" y="68" text-anchor="middle" fill="white" font-size="9">天鏡湖</text>
+    <text x="780" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">豬苗代湖</text>
+    <text x="780" y="110" text-anchor="middle" fill="#8B6040" font-size="9">日本第四大湖</text>
+    
+    <circle cx="940" cy="60" r="24" fill="#C0522A" opacity="0.9"/>
+    <text x="940" y="55" text-anchor="middle" fill="white" font-size="13">🍽️</text>
+    <text x="940" y="68" text-anchor="middle" fill="white" font-size="9">自助餐</text>
+    <text x="940" y="96" text-anchor="middle" fill="#6B3F1E" font-size="10" font-weight="600">裏磐梯飯店</text>
+    
+    <line x1="84" y1="60" x2="184" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+    <line x1="234" y1="60" x2="354" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+    <line x1="404" y1="60" x2="460" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+    <line x1="546" y1="60" x2="584" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+    <line x1="634" y1="60" x2="754" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+    <line x1="804" y1="60" x2="914" y2="60" stroke="#D4872E" stroke-width="2" marker-end="url(#arr4)"/>
+  </svg>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌅</span>
+  <div>
+    <div class="loc-name">裏磐梯の早晨</div>
+    <div class="loc-subtitle">飯店早餐與晨間風光</div>
+  </div>
+  <span class="loc-badge">5/11 早晨</span>
+</div>
+<div class="text-note"><span class="tn-icon">🌄</span>裏磐梯高原的清晨空氣清新沁涼，飯店窗外可遠眺磐梯山與高原湖泊的晨霧景色。享用飯店豐盛早餐，準備出發！</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1327.JPG','IMG_1327.JPG',this)">
+    <img src="IMG_1327.JPG" alt="IMG_1327.JPG" loading="lazy">
+    <span class="photo-num">1/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1329.JPG','IMG_1329.JPG',this)">
+    <img src="IMG_1329.JPG" alt="IMG_1329.JPG" loading="lazy">
+    <span class="photo-num">2/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1330.JPG','IMG_1330.JPG',this)">
+    <img src="IMG_1330.JPG" alt="IMG_1330.JPG" loading="lazy">
+    <span class="photo-num">3/3</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🗿</span>
+  <div>
+    <div class="loc-name">塔崖（塔のへつり）</div>
+    <div class="loc-subtitle">2800萬年自然鬼斧神工的奇岩秘境</div>
+  </div>
+  <span class="loc-badge">5/11 上午</span>
+</div>
+<div class="spot-info">
+<strong>塔のへつり</strong>（塔崖）是距今約2800萬年前由沉積岩形成的奇特地形，經過漫長的天然風化與河川侵蝕，形成一座座如塔般聳立的懸崖峭壁，被日本列為<strong>國家天然紀念物</strong>。
+<br><br>🌉 走在吊橋上可從側面欣賞塔崖凹凸的輪廓線條；走入斷崖內部可近距離觀察岩石的紋理，近看遠看各有不同風情。<br>
+🌿「へつり」在會津方言中是「危險的斷崖絕壁」之意。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1336.JPG','IMG_1336.JPG',this)">
+    <img src="IMG_1336.JPG" alt="IMG_1336.JPG" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1346.JPG','IMG_1346.JPG',this)">
+    <img src="IMG_1346.JPG" alt="IMG_1346.JPG" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1353.JPG','IMG_1353.JPG',this)">
+    <img src="IMG_1353.JPG" alt="IMG_1353.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1360.JPG','IMG_1360.JPG',this)">
+    <img src="IMG_1360.JPG" alt="IMG_1360.JPG" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1367.JPG','IMG_1367.JPG',this)">
+    <img src="IMG_1367.JPG" alt="IMG_1367.JPG" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1375.JPG','IMG_1375.JPG',this)">
+    <img src="IMG_1375.JPG" alt="IMG_1375.JPG" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1384.JPG','IMG_1384.JPG',this)">
+    <img src="IMG_1384.JPG" alt="IMG_1384.JPG" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1393.JPG','IMG_1393.JPG',this)">
+    <img src="IMG_1393.JPG" alt="IMG_1393.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1404.JPG','IMG_1404.JPG',this)">
+    <img src="IMG_1404.JPG" alt="IMG_1404.JPG" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1411.JPG','IMG_1411.JPG',this)">
+    <img src="IMG_1411.JPG" alt="IMG_1411.JPG" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🏘️</span>
+  <div>
+    <div class="loc-name">大內宿 — 日本三大合掌村</div>
+    <div class="loc-subtitle">江戶時代宿場町，茅葺屋頂完整保存</div>
+  </div>
+  <span class="loc-badge">5/11 上午</span>
+</div>
+<div class="spot-info">
+<strong>大內宿</strong>是連接會津若松市與日光今市的重要江戶時代宿場町，街道兩旁<strong>茅葺屋頂</strong>民家至今保存完整，是日本少見的古街道景觀。
+<br><br>🏛️ 1981年被日本選定為<strong>國家重要傳統建造物群保存地區</strong>，茅葺技術更被列入無形文化遺產。<br>
+🧅 大內宿名物「<strong>蔥蕎麥麵（ねぎそば）</strong>」：用一根完整大蔥代替筷子吃蕎麥麵，是當地獨特的飲食文化！
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1416.jpg','IMG_1416.jpg',this)">
+    <img src="IMG_1416.jpg" alt="IMG_1416.jpg" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1427.jpg','IMG_1427.jpg',this)">
+    <img src="IMG_1427.jpg" alt="IMG_1427.jpg" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1434.JPG','IMG_1434.JPG',this)">
+    <img src="IMG_1434.JPG" alt="IMG_1434.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1437.JPG','IMG_1437.JPG',this)">
+    <img src="IMG_1437.JPG" alt="IMG_1437.JPG" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1444.JPG','IMG_1444.JPG',this)">
+    <img src="IMG_1444.JPG" alt="IMG_1444.JPG" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1449.JPG','IMG_1449.JPG',this)">
+    <img src="IMG_1449.JPG" alt="IMG_1449.JPG" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1458.JPG','IMG_1458.JPG',this)">
+    <img src="IMG_1458.JPG" alt="IMG_1458.JPG" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1469.JPG','IMG_1469.JPG',this)">
+    <img src="IMG_1469.JPG" alt="IMG_1469.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1475.jpg','IMG_1475.jpg',this)">
+    <img src="IMG_1475.jpg" alt="IMG_1475.jpg" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1481.JPG','IMG_1481.JPG',this)">
+    <img src="IMG_1481.JPG" alt="IMG_1481.JPG" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🍱</span>
+  <div>
+    <div class="loc-name">會津郷土料理中餐</div>
+    <div class="loc-subtitle">品嚐福島會津地區傳統風味</div>
+  </div>
+  <span class="loc-badge">5/11 中午</span>
+</div>
+<div class="spot-info">享用<strong>會津郷土料理</strong>，包括會津名產「<strong>棒鱈</strong>（棒だら）」、「<strong>こづゆ</strong>」（貝柱湯）等地方傳統料理，體驗會津武士之鄉的飲食文化。</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1487.jpg','IMG_1487.jpg',this)">
+    <img src="IMG_1487.jpg" alt="IMG_1487.jpg" loading="lazy">
+    <span class="photo-num">1/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1489.JPG','IMG_1489.JPG',this)">
+    <img src="IMG_1489.JPG" alt="IMG_1489.JPG" loading="lazy">
+    <span class="photo-num">2/3</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1493.jpg','IMG_1493.jpg',this)">
+    <img src="IMG_1493.jpg" alt="IMG_1493.jpg" loading="lazy">
+    <span class="photo-num">3/3</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🚂</span>
+  <div>
+    <div class="loc-name">會津鐵道 乘車體驗</div>
+    <div class="loc-subtitle">日本人氣鐵道，沿途山林溪谷美景</div>
+  </div>
+  <span class="loc-badge">5/11 下午</span>
+</div>
+<div class="spot-info">
+<strong>會津鐵道</strong>是日本人氣鐵道線之一，沿線蜿蜒穿越自然山林與溪谷，景色優美。搭乘列車悠哉漫遊，時間彷彿靜止，讓心靈完全放鬆。
+<br><br>🌿 沿途可欣賞會津盆地的山林美景，春季嫩葉初綠，充滿生機。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1499.JPG','IMG_1499.JPG',this)">
+    <img src="IMG_1499.JPG" alt="IMG_1499.JPG" loading="lazy">
+    <span class="photo-num">1/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1501.JPG','IMG_1501.JPG',this)">
+    <img src="IMG_1501.JPG" alt="IMG_1501.JPG" loading="lazy">
+    <span class="photo-num">2/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1504.JPG','IMG_1504.JPG',this)">
+    <img src="IMG_1504.JPG" alt="IMG_1504.JPG" loading="lazy">
+    <span class="photo-num">3/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1507.JPG','IMG_1507.JPG',this)">
+    <img src="IMG_1507.JPG" alt="IMG_1507.JPG" loading="lazy">
+    <span class="photo-num">4/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1513.JPG','IMG_1513.JPG',this)">
+    <img src="IMG_1513.JPG" alt="IMG_1513.JPG" loading="lazy">
+    <span class="photo-num">5/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1518.JPG','IMG_1518.JPG',this)">
+    <img src="IMG_1518.JPG" alt="IMG_1518.JPG" loading="lazy">
+    <span class="photo-num">6/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1524.JPG','IMG_1524.JPG',this)">
+    <img src="IMG_1524.JPG" alt="IMG_1524.JPG" loading="lazy">
+    <span class="photo-num">7/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1525.JPG','IMG_1525.JPG',this)">
+    <img src="IMG_1525.JPG" alt="IMG_1525.JPG" loading="lazy">
+    <span class="photo-num">8/9</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1529.JPG','IMG_1529.JPG',this)">
+    <img src="IMG_1529.JPG" alt="IMG_1529.JPG" loading="lazy">
+    <span class="photo-num">9/9</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🦢</span>
+  <div>
+    <div class="loc-name">豬苗代湖 — 天鏡湖</div>
+    <div class="loc-subtitle">日本第四大湖，清澈如鏡映出磐梯山</div>
+  </div>
+  <span class="loc-badge">5/11 下午</span>
+</div>
+<div class="spot-info">
+<strong>豬苗代湖</strong>面積103平方公里，是日本第四大湖，位於磐梯朝日國立公園內。湖水透明度在全日本數一數二，清澈見底，因能映照出磐梯山的雄偉山姿，又稱「<strong>天鏡湖</strong>」。
+<br><br>🦢 冬季有成群西伯利亞天鵝與野鴨在岸邊過冬；5月則可遙望磐梯山披著殘雪的春日英姿。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1536.JPG','IMG_1536.JPG',this)">
+    <img src="IMG_1536.JPG" alt="IMG_1536.JPG" loading="lazy">
+    <span class="photo-num">1/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1543.jpg','IMG_1543.jpg',this)">
+    <img src="IMG_1543.jpg" alt="IMG_1543.jpg" loading="lazy">
+    <span class="photo-num">2/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1544.JPG','IMG_1544.JPG',this)">
+    <img src="IMG_1544.JPG" alt="IMG_1544.JPG" loading="lazy">
+    <span class="photo-num">3/4</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1546.JPG','IMG_1546.JPG',this)">
+    <img src="IMG_1546.JPG" alt="IMG_1546.JPG" loading="lazy">
+    <span class="photo-num">4/4</span>
+  </div>
+</div>
+</div>
+<div class="loc-block">
+<div class="loc-header">
+  <span class="loc-icon">🌙</span>
+  <div>
+    <div class="loc-name">裏磐梯レイクリゾート — 第二晚豪華自助餐</div>
+    <div class="loc-subtitle">飯店晚餐與溫泉，享受最後一晚高原假期</div>
+  </div>
+  <span class="loc-badge">5/11 晚間</span>
+</div>
+<div class="spot-info">
+第二晚在<strong>裏磐梯レイクリゾート</strong>繼續享受豪華自助晚餐，現場烹飪的和食、洋食，讓旅途最後一晚留下美味記憶。<br>
+♨️ 再次享受飯店溫泉，在星空下泡湯，告別這段東北美好旅途。
+</div>
+<div class="photo-grid">
+  <div class="photo-item" onclick="openLB('IMG_1547.JPG','IMG_1547.JPG',this)">
+    <img src="IMG_1547.JPG" alt="IMG_1547.JPG" loading="lazy">
+    <span class="photo-num">1/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1554.JPG','IMG_1554.JPG',this)">
+    <img src="IMG_1554.JPG" alt="IMG_1554.JPG" loading="lazy">
+    <span class="photo-num">2/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1562.JPG','IMG_1562.JPG',this)">
+    <img src="IMG_1562.JPG" alt="IMG_1562.JPG" loading="lazy">
+    <span class="photo-num">3/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1571.JPG','IMG_1571.JPG',this)">
+    <img src="IMG_1571.JPG" alt="IMG_1571.JPG" loading="lazy">
+    <span class="photo-num">4/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1579.JPG','IMG_1579.JPG',this)">
+    <img src="IMG_1579.JPG" alt="IMG_1579.JPG" loading="lazy">
+    <span class="photo-num">5/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1590.JPG','IMG_1590.JPG',this)">
+    <img src="IMG_1590.JPG" alt="IMG_1590.JPG" loading="lazy">
+    <span class="photo-num">6/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1608.JPG','IMG_1608.JPG',this)">
+    <img src="IMG_1608.JPG" alt="IMG_1608.JPG" loading="lazy">
+    <span class="photo-num">7/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1621.JPG','IMG_1621.JPG',this)">
+    <img src="IMG_1621.JPG" alt="IMG_1621.JPG" loading="lazy">
+    <span class="photo-num">8/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1636.JPG','IMG_1636.JPG',this)">
+    <img src="IMG_1636.JPG" alt="IMG_1636.JPG" loading="lazy">
+    <span class="photo-num">9/10</span>
+  </div>
+  <div class="photo-item" onclick="openLB('IMG_1645.JPG','IMG_1645.JPG',this)">
+    <img src="IMG_1645.JPG" alt="IMG_1645.JPG" loading="lazy">
+    <span class="photo-num">10/10</span>
+  </div>
+</div>
+</div>
+</section><div class="wave"></div>
+</div><!-- /main -->
+
+<footer>
+  <div style="font-size:20px;margin-bottom:8px;">🌸 ✈️ 🏔️ 🌷 🚂 🦢</div>
+  <div style="font-weight:700;font-size:14px;color:#F0C060;margin-bottom:6px;">星愛東北五色夢幻 — 仙台5日旅行相冊</div>
+  <div>2026年5月8日—12日 ｜ 宮城縣·山形縣·福島縣</div>
+  <div style="margin-top:4px;">攝影：家人旅途記錄 ｜ 相冊製作：Claude Cowork</div>
+  <div style="margin-top:8px;font-size:11px;opacity:0.5;">✨ 祝旅途愉快，回憶永遠美好 ✨</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lb-close" onclick="closeLB()">✕</button>
+  <span class="lb-counter" id="lbCounter"></span>
+  <button class="lb-nav lb-prev" onclick="navLB(-1)">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="navLB(1)">›</button>
+  <div class="lb-caption" id="lbCap"></div>
+</div>
+
+<script>
+// ── Lightbox ──────────────────────────────────────────────────────
+let lbPhotos = [], lbIdx = 0;
+
+function openLB(src, cap, el) {
+  // Gather all photos in parent loc-block
+  const grid = el.closest('.photo-grid');
+  const items = grid.querySelectorAll('.photo-item');
+  lbPhotos = Array.from(items).map(it => ({
+    src: it.querySelector('img').src,
+    cap: it.querySelector('img').alt
+  }));
+  lbIdx = Array.from(items).indexOf(el);
+  showLB();
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLB() {
+  document.getElementById('lbImg').src = lbPhotos[lbIdx].src;
+  document.getElementById('lbCap').textContent = lbPhotos[lbIdx].cap;
+  document.getElementById('lbCounter').textContent = (lbIdx + 1) + ' / ' + lbPhotos.length;
+}
+
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navLB(d) {
+  lbIdx = (lbIdx + d + lbPhotos.length) % lbPhotos.length;
+  showLB();
+}
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key === 'ArrowRight') navLB(1);
+  else if (e.key === 'ArrowLeft') navLB(-1);
+  else if (e.key === 'Escape') closeLB();
+});
+
+document.getElementById('lb').addEventListener('click', e => {
+  if (e.target === document.getElementById('lb')) closeLB();
+});
+
+// ── Sticky nav active state ────────────────────────────────────────
+const sections = document.querySelectorAll('.day-section');
+const navLinks = document.querySelectorAll('.day-nav a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const id = entry.target.id;
+      const link = document.querySelector('.day-nav a[href="#' + id + '"]');
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
